@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        
+    .home-main{
+        min-height: 60vh;
+       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("{% static 'images\bgimg.JPG' %}");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .projects{              
+        
+    }
+    </style>
+   
+    
+    <title>Anirudh • Portfolio</title>
+</head>
+<body>
+    <div class="navigation sticky-top">
+    <nav class="container navbar navbar-dark navbar-expand-lg py-4">
+
+        <!-- Logo -->
+        <a class="navbar-brand ms-2 ms-lg-0 fw-bold" href="" style="color: #d3fbd8">@ANIRUDH</a>
+
+        <!-- Hamburger button (only shows on small screens) -->
+        <button class="navbar-toggler mx-2 rounded-circle p-3" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+            <ul class="navbar-nav gap-lg-5">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#exp">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pht">Photography</a></li>
+            </ul>
+        </div>
+
+    </nav>
+</div>
+    <div class="home-main align-content-center" id="home">
+    <div class="home align-content-center container-md py-5">
+        <div class="home-content flex-md row">
+        <div class="face-img col-md-5 d-flex justify-content-center justify-content-md-end align-items-center pt-5 pt-md-0">
+            <img src="{% static 'images/faceimg.jpg'%}" class="rounded-circle anim-left">
+        </div>
+        
+        <div class="para col-md-6 pt-5 pt-md-3 align-content-center justify-content-center">
+        <h3 class="text-center text-md-start fw-bold anim-right" style="color: #d3fbd8">Hi,</h3>
+        <p class="intro anim-right text-center text-md-start fw-bold"> I’m Anirudh, a Computer Science student with a strong interest in web development.
+             I work with HTML, CSS, JavaScript, Python, Java, and Django to build clean and functional applications.
+              Alongside my technical work, I’m passionate about photography and video editing,
+               and I enjoy capturing and creating visual content in my free time.
+             I’m always looking to improve both my technical and creative skills.</p>
+        <div class="home-buttons d-flex justify-content-center justify-content-md-start align-items-center">
+        <a href="" class="contact p-3 rounded-pill anim-right">Contact Me</a>
+        <a href="https://www.linkedin.com/in/anirudh-ajikumar-1b0861301/" class="linkedin anim-right p-3 mx-2 rounded-pill fw-bold">Linked<i class="fa-brands fa-square-linkedin"></i></a>
+        </div>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="aboutme row align-items-center pt-5" id="about">
+    
+    <!-- TEXT -->
+    <div class="about-text col-md-6 d-flex justify-content-center justify-content-md-end">
+        <div class="about-para text-center text-md-start w-100 w-md-50">
+            <h1 class="sec-h d-flex pb-4 anim-left">ABOUT ME</h1>
+            <div class="anim-left p-4">
+            <p class="mt-5">
+                I’m a B.Tech Computer Science and Engineering student with a strong interest in building clean, responsive web applications. I work primarily with HTML, CSS, Bootstrap, and Django, focusing on creating user-friendly interfaces backed by practical backend logic.
+            </p>
+
+            <p>
+                Alongside development, I’m passionate about photography, especially capturing moments during college events. Through this, I’ve developed a keen eye for composition, lighting, and visual storytelling—skills that naturally influence my approach to design and presentation in web projects.
+            </p>
+
+            <p>
+                I enjoy learning by building, improving my skills through hands-on projects, and blending technical problem-solving with creative expression.
+            </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="about-pic col-md-6 d-none d-md-flex justify-content-start">
+        <img src="{% static 'images/1757841007664.jpg'%}" class="img-fluid anim-right">
+    </div>
+
+</div>
+
+    <div class="projects" id="projects">
+        <br>
+        <h1 class="text-white d-flex justify-content-center sec-h py-4 anim-left">PROJECTS</h1>
+        <div class="skill-list mt-5 d-flex justify-content-center anim-up">
+    {% for skill in skills %}
+    <a href="{% url 'home' %}?q={{ skill.name }}"
+       class="light p-2 m-3 rounded-pill
+              {% if request.GET.q == skill.name %}active{% endif %}">
+        {{ skill.name }}
+    </a>
+    {% endfor %}
+</div>
+
+        <div class="view-project row g-5 p-5 justify-content-center">
+    {% for project in projects %}
+    <div class="col-10 col-md-7 col-lg-3">
+        <div class="project-element shadow h-100 p-0 rounded-2 appear">
+            <div class="proj-header card-h rounded-2 p-3 d-flex justify-content-between align-items-center mb-3" >
+                <h3 class="mb-0">{{ project.name }}</h3>
+                <a class="text-white fw-bold gitcode p-1 rounded-pill" style="text-decoration:none;" href="{{ project.giturl }}"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+            <div class="proj-body p-3">
+            <p class="mb-0 card-p">{{ project.desc }}</p>
+            <h5 class="card-h my-3"><i class="fa-solid fa-code"></i>Built With</h5>
+            {% for skill in project.skills.all %}
+
+            <span class="rounded-pill p-1">{{skill.name}}</span>
+    
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+    </div>
+
+<div class="exp d-flex justify-content-center row" id="exp">
+    <h1 class="d-flex justify-content-center my-5 sec-h py-4 anim-left">EXPERIENCE</h1>
+    <div class="exp-list row justify-content-center">
+        {% for exp in experience %}
+        <div class="exp-container anim-up shadow col-10 col-md-7 col-lg-3 rounded-2 m-3 p-0">
+            <div class="exp-header p-3 rounded-2">
+            <div class="d-flex justify-content-between card-h">
+            
+            <h3>{{ exp.position_name }}</h3>
+            <span class="exptype rounded-pill d-flex p-2 justify-content-center align-items-center">{{ exp.exp_type }}</span>
+            </div>
+            <p class="sub-h">{{ exp.company }}</p>
+            </div>
+            <div class="exp-body p-3">
+            <p class="card-p">{{ exp.desc }}</p>
+            <h5 class="card-h mb-3"><i class="fa-solid fa-graduation-cap mx-2" ></i>  Skills Developed</h5>
+
+            {% for skill in exp.skills_dev.all %}
+
+            <span class="rounded-pill p-1">{{skill.name}}</span>
+    
+            {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="gallery mb-5" id="pht">
+<br>
+<h1 class="d-flex justify-content-center my-5 sec-h py-4">PHOTOGRAPHY</h1>
+<div class="slider-container">
+
+    <button class="slider-btn prev">&#10094;</button>
+
+    <div class="slider">
+    <div class="slides">
+        {% for i in images %}
+        <div class="box"
+             style="background-image: url('{% static 'images/' %}{{ i }}.jpg');
+                    background-size: cover;
+                    background-position: center;">
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+    <button class="slider-btn next">&#10095;</button>
+</div>
+</div>
+
+
+<div class="footer row">
+<div class="col-3 col-md-4 col-lg-5"></div>
+<div class="col-6 col-md-4 col-lg-2">
+<div class="footer-h d-none d-md-flex justify-content-center"><h3>AROUND THE WEB</h3></div>
+<div class="footer-links d-flex justify-content-around mt-4">
+    <span><a href="https://www.instagram.com/anirudhajikumar/"><i class="fa-brands fa-instagram m-3"></i></a></span>
+    <span><a href=""><i class="fa-solid fa-envelope m-3"></i></a></span>
+    <span><a href="https://github.com/anirudhajikumar/"><i class="fa-brands fa-github m-3"></i></a></span>
+</div>
+</div>
+<div class="col-3 col-md-4 col-lg-5"></div>
+</div>
+<div class="footer-end p-3">
+    <p class="mb-0 text-light d-flex justify-content-center">
+        © <span id="year"></span> Anirudh. All rights reserved.
+    </p>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* ================= SLIDER ================= */
+    const slides = document.querySelector(".slides");
+    const nextBtn = document.querySelector(".next");
+    const prevBtn = document.querySelector(".prev");
+
+    if (slides && nextBtn && prevBtn) {
+        const duration = 400;
+
+        function getBoxWidth() {
+            return document.querySelector(".box").offsetWidth;
+        }
+
+        nextBtn.onclick = () => {
+            const boxWidth = getBoxWidth();
+            slides.style.transition = "transform 0.4s";
+            slides.style.transform = `translateX(-${boxWidth}px)`;
+
+            setTimeout(() => {
+                slides.style.transition = "none";
+                slides.appendChild(slides.children[0]);
+                slides.style.transform = "translateX(0)";
+            }, duration);
+        };
+
+        prevBtn.onclick = () => {
+            const boxWidth = getBoxWidth();
+            slides.style.transition = "none";
+            slides.insertBefore(
+                slides.children[slides.children.length - 1],
+                slides.children[0]
+            );
+            slides.style.transform = `translateX(-${boxWidth}px)`;
+            slides.offsetHeight;
+            slides.style.transition = "transform 0.4s";
+            slides.style.transform = "translateX(0)";
+        };
+    }
+
+    /* ================= INTERSECTION OBSERVER ================= */
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll(
+        ".appear, .anim-up, .anim-left, .anim-right"
+    ).forEach(el => observer.observe(el));
+
+    /* ================= NEW SMOOTH SCROLL + BOOTSTRAP FIX ================= */
+    document.querySelectorAll('.navbar-nav a[href^="#"]').forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                const navbar = document.querySelector(".navbar");
+                const offset = navbar ? navbar.offsetHeight : 0;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                // Close the mobile menu first
+                const navCollapse = document.querySelector(".navbar-collapse");
+                // Get or create the Bootstrap collapse instance
+                const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false });
+                
+                // If the menu is actually open (has the 'show' class)
+                if (navCollapse.classList.contains('show')) {
+                    navCollapse.addEventListener('hidden.bs.collapse', () => {
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }, { once: true });
+                    bsCollapse.hide();
+                } else {
+                    // If desktop or menu already closed, just scroll
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            }
+        });
+    });
+
+});
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

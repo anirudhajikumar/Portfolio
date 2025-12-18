@@ -26,7 +26,12 @@ SECRET_KEY = 'django-insecure-@8+ri-%t=(^z4b55mh7&3s0jkx269euf0m^06e!_wylu8kkqik
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app','.now.sh','127.0.0.1']
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    ".railway.app",
+]
+
 
 
 # Application definition
@@ -42,14 +47,16 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # 👈 add this
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
 
 ROOT_URLCONF = 'portfolioanirudh.urls'
 
@@ -78,17 +85,26 @@ WSGI_APPLICATION = 'portfolioanirudh.wsgi.application'
 
 import os
 from pathlib import Path
+import dj_database_url
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "railway",
-        "USER": "postgres",
-        "PASSWORD": "ELUsLjneJTMeWSAVwhYJMZoFuUUudbcy",
-        "HOST": "tramway.proxy.rlwy.net",
-        "PORT": "58882",
-    }
+    "default": dj_database_url.config(
+        default=os.environ.get("DATABASE_URL"),
+        conn_max_age=600,
+        ssl_require=True,
+    )
 }
+
+# DATABASES = {
+#   "default": {
+#        "ENGINE": "django.db.backends.postgresql",
+#        "NAME": "railway",
+#        "USER": "postgres",
+#        "PASSWORD": "ELUsLjneJTMeWSAVwhYJMZoFuUUudbcy",
+#        "HOST": "tramway.proxy.rlwy.net",
+#        "PORT": "58882",
+#    }
+#}
 
 
 
@@ -131,3 +147,5 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build', 'static')
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

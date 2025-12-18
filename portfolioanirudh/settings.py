@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+import os 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-@8+ri-%t=(^z4b55mh7&3s0jkx269euf0m^06e!_wylu8kkqik'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app','.now.sh','127.0.0.1']
 
 
 # Application definition
@@ -75,12 +76,20 @@ WSGI_APPLICATION = 'portfolioanirudh.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+import os
+from pathlib import Path
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "railway",
+        "USER": "postgres",
+        "PASSWORD": "ELUsLjneJTMeWSAVwhYJMZoFuUUudbcy",
+        "HOST": "tramway.proxy.rlwy.net",
+        "PORT": "58882",
     }
 }
+
 
 
 # Password validation
@@ -121,3 +130,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build', 'static')

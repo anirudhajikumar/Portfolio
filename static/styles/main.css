@@ -277,6 +277,17 @@ a.linkedin:hover{
     }
 }
 
+@media (max-width: 375px) {
+    .slider {
+        width: 350px;
+        aspect-ratio: 3 / 4;
+    }
+
+    .box {
+        background-position: center bottom !important;
+    }
+}
+
 
 
 .footer{

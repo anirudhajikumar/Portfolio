@@ -387,12 +387,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-[...document.querySelectorAll('*')].forEach(el => {
-  if (el.scrollWidth > el.clientWidth + 1) {
-    console.log(el, 'OVERFLOWING');
-    el.style.outline = '2px solid red';
-  }
-});
 
 
 </script>

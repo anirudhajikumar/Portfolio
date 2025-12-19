@@ -116,7 +116,7 @@
     <div class="projects" id="projects">
         <br>
         <h1 class="text-white d-flex justify-content-center sec-h py-4 anim-left">PROJECTS</h1>
-        <div class="skill-list mt-5 d-md-flex justify-content-center anim-up">
+        <div class="skill-list mt-5 d-flex flex-wrap justify-content-center anim-up">
     {% for skill in skills %}
     <a href="{% url 'home' %}?q={{ skill.name }}"
        class="light p-2 m-3 rounded-pill

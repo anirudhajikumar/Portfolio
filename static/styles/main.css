@@ -275,7 +275,7 @@ a.linkedin:hover{
     .box {
         min-width: 100%;
         width: 100%;
-        aspect-ratio: 4 / 5;   /* what you wanted */
+        aspect-ratio: 3 / 4;   /* what you wanted */
         background-position: center bottom;
     }
 }
@@ -288,7 +288,7 @@ a.linkedin:hover{
 
     .box {
         min-width: 100%;
-        aspect-ratio: 4 / 5;
+        aspect-ratio: 3 / 4;
         background-position: center bottom;
     }
 }

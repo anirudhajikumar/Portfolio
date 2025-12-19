@@ -84,68 +84,105 @@
         </div>
     </div>
 </div>
-<div class="aboutme row align-items-center pt-5" id="about">
-    
-    <!-- TEXT -->
-    <div class="about-text col-md-6 d-flex justify-content-center justify-content-md-end">
-        <div class="about-para text-center text-md-start w-100 w-md-50">
-            <h1 class="sec-h d-flex pb-4 anim-left text-center text-md-start">ABOUT ME</h1>
-            <div class="anim-left p-4">
-            <p class="mt-5">
-                I’m a B.Tech Computer Science and Engineering student with a strong interest in building clean, responsive web applications. I work primarily with HTML, CSS, Bootstrap, and Django, focusing on creating user-friendly interfaces backed by practical backend logic.
+<div class="aboutme pt-5" id="about">
+  <div class="container-fluid">
+
+    <div class="row align-items-center">
+
+      <!-- TEXT -->
+      <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+        <div class="about-para text-center text-md-start w-100 w-md-75">
+
+          <h1 class="sec-h pb-4 anim-left text-center text-md-start">
+            ABOUT ME
+          </h1>
+
+          <div class="anim-left p-4">
+            <p class="mt-4">
+              I’m a B.Tech Computer Science and Engineering student with a strong interest in building clean, responsive web applications. I work primarily with HTML, CSS, Bootstrap, and Django, focusing on creating user-friendly interfaces backed by practical backend logic.
             </p>
 
             <p>
-                Alongside development, I’m passionate about photography, especially capturing moments during college events. Through this, I’ve developed a keen eye for composition, lighting, and visual storytelling—skills that naturally influence my approach to design and presentation in web projects.
+              Alongside development, I’m passionate about photography, especially capturing moments during college events. Through this, I’ve developed a keen eye for composition, lighting, and visual storytelling—skills that naturally influence my approach to design and presentation in web projects.
             </p>
 
             <p>
-                I enjoy learning by building, improving my skills through hands-on projects, and blending technical problem-solving with creative expression.
+              I enjoy learning by building, improving my skills through hands-on projects, and blending technical problem-solving with creative expression.
             </p>
-            </div>
+          </div>
+
         </div>
+      </div>
+
+      <!-- IMAGE -->
+      <div class="col-md-6 d-none d-md-flex justify-content-start">
+        <img
+          src="{% static 'images/1757841007664.jpg' %}"
+          class="img-fluid anim-right"
+          alt="About image"
+        >
+      </div>
+
     </div>
 
-    <!-- IMAGE -->
-    <div class="about-pic col-md-6 d-none d-md-flex justify-content-start">
-        <img src="{% static 'images/1757841007664.jpg'%}" class="img-fluid anim-right">
-    </div>
-
+  </div>
 </div>
 
-    <div class="projects" id="projects">
-        <br>
-        <h1 class="text-white d-flex justify-content-center sec-h py-4 anim-left">PROJECTS</h1>
-        <div class="skill-list mt-5 d-flex flex-wrap justify-content-center anim-up">
-    {% for skill in skills %}
-    <a href="{% url 'home' %}?q={{ skill.name }}"
-       class="light p-2 m-3 rounded-pill
-              {% if request.GET.q == skill.name %}active{% endif %}">
+
+   <div class="projects" id="projects">
+  <div class="container-fluid">
+
+    <!-- Section heading -->
+    <h1 class="text-white d-flex justify-content-center sec-h py-4 anim-left">
+      PROJECTS
+    </h1>
+
+    <!-- Skill filter pills -->
+    <div class="skill-list mt-4 d-flex flex-wrap justify-content-center anim-up">
+      {% for skill in skills %}
+      <a href="{% url 'home' %}?q={{ skill.name }}"
+         class="light p-2 m-2 rounded-pill
+                {% if request.GET.q == skill.name %}active{% endif %}">
         {{ skill.name }}
-    </a>
-    {% endfor %}
-</div>
-
-        <div class="view-project row g-5 p-5 justify-content-center">
-    {% for project in projects %}
-        <div class="project-element col-10 col-md-7 col-lg-3 shadow h-100 p-0 rounded-2 appear">
-            <div class="proj-header card-h rounded-2 p-3 d-flex justify-content-between align-items-center mb-3" >
-                <h3 class="mb-0">{{ project.name }}</h3>
-                <a class="text-white fw-bold gitcode p-1 rounded-pill" style="text-decoration:none;" href="{{ project.giturl }}"><i class="fa-brands fa-github"></i> Code</a>
-            </div>
-            <div class="proj-body p-3">
-            <p class="mb-0 card-p">{{ project.desc }}</p>
-            <h5 class="card-h my-3"><i class="fa-solid fa-code"></i>Built With</h5>
-            {% for skill in project.skills.all %}
-
-            <span class="rounded-pill p-1">{{skill.name}}</span>
-    
-            {% endfor %}
-            </div>
-        </div>
-    {% endfor %}
-</div>
+      </a>
+      {% endfor %}
     </div>
+
+    <!-- Project cards -->
+    <div class="row justify-content-center view-project g-4 mt-4">
+      {% for project in projects %}
+      <div class="col-10 col-md-7 col-lg-3">
+        <div class="project-element shadow h-100 p-0 rounded-2 appear">
+
+          <div class="proj-header card-h rounded-2 p-3 d-flex justify-content-between align-items-center">
+            <h3 class="mb-0">{{ project.name }}</h3>
+            <a class="text-white fw-bold gitcode p-1 rounded-pill"
+               style="text-decoration:none;"
+               href="{{ project.giturl }}">
+              <i class="fa-brands fa-github"></i> Code
+            </a>
+          </div>
+
+          <div class="proj-body p-3">
+            <p class="mb-0 card-p">{{ project.desc }}</p>
+
+            <h5 class="card-h my-3">
+              <i class="fa-solid fa-code"></i> Built With
+            </h5>
+
+            {% for skill in project.skills.all %}
+            <span class="rounded-pill p-1">{{ skill.name }}</span>
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
 
 <div class="exp" id="exp">
   <div class="container-fluid">

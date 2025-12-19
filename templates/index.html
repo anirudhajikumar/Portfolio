@@ -128,8 +128,7 @@
 
         <div class="view-project row g-5 p-5 justify-content-center">
     {% for project in projects %}
-    <div class="col-10 col-md-7 col-lg-3">
-        <div class="project-element shadow h-100 p-0 rounded-2 appear">
+        <div class="project-element col-10 col-md-7 col-lg-3 shadow h-100 p-0 rounded-2 appear">
             <div class="proj-header card-h rounded-2 p-3 d-flex justify-content-between align-items-center mb-3" >
                 <h3 class="mb-0">{{ project.name }}</h3>
                 <a class="text-white fw-bold gitcode p-1 rounded-pill" style="text-decoration:none;" href="{{ project.giturl }}"><i class="fa-brands fa-github"></i> Code</a>
@@ -144,7 +143,6 @@
             {% endfor %}
             </div>
         </div>
-    </div>
     {% endfor %}
 </div>
     </div>

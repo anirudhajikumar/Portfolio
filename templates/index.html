@@ -321,14 +321,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-(function () {
-  document.querySelectorAll('*').forEach(el => {
-    if (el.scrollWidth > el.clientWidth) {
-      el.style.outline = '2px solid red';
-      console.log('Overflow:', el);
-    }
-  });
-})();
+[...document.querySelectorAll('*')].forEach(el => {
+  if (el.scrollWidth > el.clientWidth + 1) {
+    console.log(el, 'OVERFLOWING');
+    el.style.outline = '2px solid red';
+  }
+});
+
 
 </script>
 

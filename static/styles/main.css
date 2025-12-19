@@ -268,10 +268,15 @@ a.linkedin:hover{
 /* ===== MOBILE ===== */
 @media (max-width: 575px) {
     .slider {
-        width: 400px; /* 1 item */
-        height: 533px;
+        width: 400px;
+        aspect-ratio: 3 / 4;
+    }
+
+    .box {
+        background-position: center bottom !important;
     }
 }
+
 
 
 .footer{

@@ -9,9 +9,13 @@ def home(request):
     experience = Experience.objects.all()
     q = request.GET.get('q', '')  # clean and safe
 
-    projects = Project.objects.filter(
-        skills__name__icontains=q
-    ).distinct()
+    projects = Project.objects.all()
+
+    if q:
+        projects = projects.filter(
+            skills__name__iexact=q
+        ).distinct()
+
 
     images = list(range(1, 22))  # 1 to 21
 

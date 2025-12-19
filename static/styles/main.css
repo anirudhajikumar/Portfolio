@@ -269,9 +269,7 @@ a.linkedin:hover{
 @media (max-width: 575px) {
     .slider {
         width: 400px; /* 1 item */
-    }
-    .box{
-        aspect-ratio: 3/4;
+        height: 533px;
     }
 }
 
